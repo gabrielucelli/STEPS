@@ -5,7 +5,6 @@
 #define min(x,y)(x<y? x: y)
 #define max(x,y)(x>y?x:y)
 
-//12:40
 //dp n m tempo
 int dp[22][22][2000+2];
 int mat[1005][5];
@@ -37,7 +36,6 @@ int recur(int x0, int y0, int i, int tempo)
 
   if(passos(x0, y0, mat[i][0], mat[i][1]) + tempo > mat[i][2])
   {
-    //deu ruim
     return dp[x0][y0][tempo] = recur(x0, y0, i+1, tempo);
   }
   else
